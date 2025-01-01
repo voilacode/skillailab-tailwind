@@ -9,7 +9,7 @@
   <link href="../dist/css/output.css" rel="stylesheet">
   <style>
     :root {
-        --primary: #3464ac;
+        --primary: #34ac52;
         --secondary: #ef7373;
         --tertiary: #8edca0;
     }
@@ -21,111 +21,93 @@
     .float-animation {
         animation: float 6s ease-in-out infinite;
     }
-    .gradient-text {
-        background: linear-gradient(45deg, var(--primary), var(--secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .hero-gradient {
-        background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
-    }
-    .card-gradient {
-        background: linear-gradient(135deg, rgba(52, 100, 172, 0.1) 0%, rgba(239, 115, 115, 0.05) 100%);
-        backdrop-filter: blur(10px);
-    }
-    .primary-button {
-        background: linear-gradient(45deg, var(--primary), var(--secondary));
-    }
-    .primary-button:hover {
-        background: linear-gradient(45deg, var(--secondary), var(--primary));
-    }
+    :root {
+            --primary-green: #0b9b47; /* Green */
+            --secondary-pink: #ff4081; /* Pink */
+            --accent-orange: #ff9800; /* Orange */
+            --highlight-yellow: #dbb601; /* Yellow */
+            --light-bg: #ffffff; /* Light Background */
+            --text-dark: #333333;
+            --text-muted: #666666;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg,  var(--secondary-pink), var(--accent-orange), var(--highlight-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .primary-button {
+            background: linear-gradient(90deg, var(--primary-green), var(--highlight-yellow));
+            box-shadow: 0 4px 6px rgba(0, 200, 83, 0.3);
+            color: white;
+        }
+        .primary-button:hover {
+            background: linear-gradient(90deg, var(--accent-orange), var(--primary-green));
+            transform: scale(1.05);
+        }
+        .secondary-button {
+            border: 2px solid var(--secondary-pink);
+            color: var(--secondary-pink);
+        }
+        .secondary-button:hover {
+            background: var(--secondary-pink);
+            color: white;
+        }
 </style>
 </head>
 <body class="bg-white">
-       <!-- Navigation -->
-        <!-- Navigation -->
-        <nav class="bg-white shadow-md border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
-                    <!-- Logo -->
-                    <div class="flex items-center">
-                        <img src="../assets/global/skillailab_logo_dark.png" alt="SkillAiLab Logo" class="h-8">
-                    </div>
-                    <!-- Menu -->
-                    <div class="hidden md:flex items-center space-x-6">
-                        <a href="#" class="text-gray-600 hover:text-[#3464ac] transition-colors duration-300">Features</a>
-                        <a href="#" class="text-gray-600 hover:text-[#3464ac] transition-colors duration-300">Solutions</a>
-                        <a href="#" class="text-gray-600 hover:text-[#3464ac] transition-colors duration-300">About</a>
-                        <button class="bg-[#3464ac] text-white px-6 py-2 rounded-full hover:bg-[#ef7373] transition-all duration-300">Get Started</button>
-                    </div>
-                    <!-- Mobile Menu Button -->
-                    <div class="md:hidden">
-                        <button id="menu-toggle" class="text-gray-600 hover:text-[#3464ac] focus:outline-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden">
-                <div class="bg-white shadow-lg border-t border-gray-200">
-                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-[#3464ac]">Features</a>
-                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-[#3464ac]">Solutions</a>
-                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-[#3464ac]">About</a>
-                    <button class="w-full bg-[#3464ac] text-white px-6 py-2 mt-2  hover:bg-[#ef7373] transition-all duration-300">
-                        Get Started
-                    </button>
-                </div>
-            </div>
-        </nav>
-
+    
+    <div class="bg-emerald-500 p-1"></div>
     <!-- Hero Section -->
-    <div class="hero-gradient">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="border-b py-10 bg-gradient-to-br from-white via-[#ececec] to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex lg:items-center lg:justify-between">
+                
                 <div class="lg:w-1/2">
+                    <img src="../assets/global/skillailab_logo_dark.png" alt="SkillAiLab Logo" class="h-14 mb-12">
+               
                     <h1 class="text-5xl font-extrabold mb-8">
-                        <span class="block text-[#3464ac]">Master Your Skills</span>
-                        <span class="block text-[#ef7373]">With AI-Powered Learning</span>
+                        <span class="block gradient-text">Master your skills</span>
+                        <span class="block gradient-text">With AI powered learning & Assessments</span>
                     </h1>
-                    <p class="text-gray-600 text-xl mb-8">
-                        Empowering individuals to master communication and programming skills through AI-driven evaluations.
+                    <p class="text-muted text-xl mb-8">
+                        Revolutionizing communication and programming skills with AI-driven labs for colleges and universities.
                     </p>
                     <div class="flex space-x-4">
-                        <button class="px-8 py-3 rounded-full primary-button text-white transform hover:scale-105 transition-all duration-300">
-                            Start Learning
+                        <a href="/login">
+                        <button class="px-8 py-3 rounded-full primary-button transform hover:scale-105 transition-all duration-300">
+                            Login
                         </button>
-                        <button class="px-8 py-3 rounded-full border-2 border-[#3464ac] text-[#3464ac] hover:bg-[#3464ac] hover:text-white transition-all duration-300">
+                    </a>
+                        <button class="px-8 py-3 rounded-full secondary-button hover:bg-secondary-pink hover:text-white transition-all duration-300">
                             Watch Demo
                         </button>
                     </div>
                 </div>
                 <div class="lg:w-1/2 mt-10 lg:mt-0">
-                    <div class="float-animation">
-                        <img src="../assets/global/skillailab.png" alt="AI Learning Platform" class="w-full rounded-lg ">
-                    </div>
+                    <img src="../assets/global/skillailab.png" alt="AI Learning Platform" class="w-full rounded-lg ">
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Features Section -->
     <div class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-[#3464ac]">Transform Your Learning Experience</h2>
+                <h2 class="text-4xl font-bold text-[#34ac52]">Transform Your Learning Experience</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 border-t-4 border-[#3464ac]">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-[#3464ac] rounded-full flex items-center justify-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 border-t-4 border-[#34ac52]">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-[#34ac52] rounded-full flex items-center justify-center">
                         <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-[#3464ac] mb-4">AI-Powered Feedback</h3>
+                    <h3 class="text-xl font-semibold text-[#34ac52] mb-4">AI-Powered Feedback</h3>
                     <p class="text-gray-600">Receive instant, personalized feedback on your programming and communication skills.</p>
                 </div>
 
@@ -153,7 +135,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-[#3464ac]">
+    <div class="bg-[#34ac52]">
         <div class="max-w-4xl mx-auto text-center py-20 px-4 sm:py-24 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-extrabold text-white mb-8">
                 Ready to boost your skills?
@@ -161,38 +143,22 @@
             <p class="text-xl text-white mb-8">
                 Join thousands of students who are already improving their skills with SkillAiLab.
             </p>
-            <button class="px-8 py-4 rounded-full bg-white text-[#3464ac] hover:bg-[#ef7373] hover:text-white transition-all duration-300 transform hover:scale-105">
+            <a href="/register">
+            <button class="px-8 py-4 rounded-full bg-white text-[#34ac52] hover:bg-[#ef7373] hover:text-white transition-all duration-300 transform hover:scale-105">
                 Sign up for free
             </button>
+        </a>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class="bg-gray-50 border-t border-gray-200">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <img src="../assets/global/skillailab_logo_dark.png" alt="SkillAiLab Logo" class="h-8 mb-4 md:mb-0">
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-[#3464ac] transition-colors duration-300">
-                        <span class="sr-only">Twitter</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-[#3464ac] transition-colors duration-300">
-                        <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="mt-8 border-t border-gray-200 pt-8 text-center">
+            
+            <div class="mt-8  border-gray-200 pt-8 text-center">
                 <p class="text-gray-400">&copy; 2025 Voilacode Technologies. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
     <!-- Script -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
