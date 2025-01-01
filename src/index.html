@@ -28,57 +28,59 @@
     
         <!-- Title -->
         <title>SkillAILab | AI-Powered Labs for Communication & Programming</title>
+        <style>
+            :root {
+                --primary: #34ac52;
+                --secondary: #ef7373;
+                --tertiary: #8edca0;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+            .float-animation {
+                animation: float 6s ease-in-out infinite;
+            }
+            :root {
+                    --primary-green: #0b9b47; /* Green */
+                    --secondary-pink: #ff4081; /* Pink */
+                    --accent-orange: #ff9800; /* Orange */
+                    --highlight-yellow: #dbb601; /* Yellow */
+                    --light-bg: #ffffff; /* Light Background */
+                    --text-dark: #333333;
+                    --text-muted: #666666;
+                }
+                body {
+                    background-color: var(--light-bg);
+                    color: var(--text-dark);
+                }
+                .gradient-text {
+                    background: linear-gradient(90deg,  var(--secondary-pink), var(--accent-orange), var(--highlight-yellow));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                .primary-button {
+                    background: linear-gradient(90deg, var(--primary-green), var(--highlight-yellow));
+                    box-shadow: 0 4px 6px rgba(0, 200, 83, 0.3);
+                    color: white;
+                }
+                .primary-button:hover {
+                    background: linear-gradient(90deg, var(--accent-orange), var(--primary-green));
+                    transform: scale(1.05);
+                }
+                .secondary-button {
+                    border: 2px solid var(--secondary-pink);
+                    color: var(--secondary-pink);
+                }
+                .secondary-button:hover {
+                    background: var(--secondary-pink);
+                    color: white;
+                }
+        </style>
+         <link rel="stylesheet" href="../dist/css/output.css">
     </head>
-    <style>
-        :root {
-            --primary: #34ac52;
-            --secondary: #ef7373;
-            --tertiary: #8edca0;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        :root {
-                --primary-green: #0b9b47; /* Green */
-                --secondary-pink: #ff4081; /* Pink */
-                --accent-orange: #ff9800; /* Orange */
-                --highlight-yellow: #dbb601; /* Yellow */
-                --light-bg: #ffffff; /* Light Background */
-                --text-dark: #333333;
-                --text-muted: #666666;
-            }
-            body {
-                background-color: var(--light-bg);
-                color: var(--text-dark);
-            }
-            .gradient-text {
-                background: linear-gradient(90deg,  var(--secondary-pink), var(--accent-orange), var(--highlight-yellow));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            .primary-button {
-                background: linear-gradient(90deg, var(--primary-green), var(--highlight-yellow));
-                box-shadow: 0 4px 6px rgba(0, 200, 83, 0.3);
-                color: white;
-            }
-            .primary-button:hover {
-                background: linear-gradient(90deg, var(--accent-orange), var(--primary-green));
-                transform: scale(1.05);
-            }
-            .secondary-button {
-                border: 2px solid var(--secondary-pink);
-                color: var(--secondary-pink);
-            }
-            .secondary-button:hover {
-                background: var(--secondary-pink);
-                color: white;
-            }
-    </style>
+   
 
 <body class="bg-white">
     
